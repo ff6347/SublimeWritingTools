@@ -1,7 +1,8 @@
 import sublime
 import sublime_plugin
 import re
-
+from bs4 import BeautifulSoup
+from markdown import markdown
 
 class TextStatisticsCommand(sublime_plugin.TextCommand):
 
@@ -16,7 +17,9 @@ class TextStatisticsCommand(sublime_plugin.TextCommand):
 
     def word_count(self):
         contents = self.view.substr(sublime.Region(0, self.view.size()))
-        return "Words: " + str(len(contents.split(" ")))
+        html = markdown(contents)
+        text = BeautifulSoup(html).text
+        return "Words: " + str(len(text.split()))
 
     def par_count(self):
         contents = self.view.substr(sublime.Region(0, self.view.size()))
