@@ -1,6 +1,10 @@
 [
-    {
-        "caption": "List Figures",
-        "command": "list_figures"
-    }
+  {
+    "caption": "List Figures",
+    "command": "list_figures"
+  },
+  {
+    "caption": "Show Text Statistics",
+    "command": "text_statistics"
+  }
 ]
