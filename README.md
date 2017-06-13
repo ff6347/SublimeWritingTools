@@ -17,7 +17,7 @@ When writing with [pandoc][pandoc] flavored markdown it is nice to use the [pand
 
 ## Command "Show Text Statistics"
 
-This command show some statistics about the text. These are not accurate yet. It roughly counts characters, words and paragraphs. There needs to be some filtering to get the pure text excluding all the markdown syntax.  
+This command show some statistics about the text. If not canceled the selected element will be inserted at the cursor position. If `insert all` is selected the whole stats will be inserted.  
 
 ### Prerequisites
 
