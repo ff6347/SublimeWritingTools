@@ -3,6 +3,10 @@
     "caption": "List Figures",
     "command": "list_figures"
   },
+    {
+    "caption": "List Headings",
+    "command": "list_headings"
+  },
   {
     "caption": "Show Text Statistics",
     "command": "text_statistics"

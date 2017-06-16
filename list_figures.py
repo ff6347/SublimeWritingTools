@@ -7,7 +7,7 @@ from SublimeWritingTools.conf import settings
 
 RES = []
 # FIG = "foo"
-PREFIX = settings().get("prefix", "+@")
+PREFIX = settings().get("prefix-fig", "+@")
 
 class ListFiguresCommand(sublime_plugin.TextCommand):
     """docstrong"""
