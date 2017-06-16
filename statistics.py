@@ -1,19 +1,17 @@
 import sublime
 import sublime_plugin
 import re
-from bs4 import BeautifulSoup
-from markdown import markdown
 
 stats = ["Insert all"]
+from SublimeWritingTools.cleaner import Cleaner
 
+cleaner = Cleaner()
 
 class TextStatisticsCommand(sublime_plugin.TextCommand):
 
     def remove_formatting(self):
         contents = self.view.substr(sublime.Region(0, self.view.size()))
-        html = markdown(contents)
-        text = BeautifulSoup(html).text
-        return text
+        return cleaner.plain_text(contents)
 
     def all_characters_incl_ws_count(self):
         text = self.remove_formatting()
